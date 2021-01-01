@@ -64,7 +64,7 @@ cam.save('animation.gif')
 ## Example:
 ```
 
-    from matplotlib import pyplot as plt
+    import matplotlib.pyplot as plt
     from mplcamera import Camera
 
     fig, ax = plt.subplots()
@@ -77,7 +77,10 @@ cam.save('animation.gif')
 
             cam.snap()
 
-    cam.save('mpl_camera_animation.gif', duration=[0.1, 0.1, 1, 0.1], loop=1)
+    # use a different duration for frame 3. use loop=1 to not loop the gif
+    mimsave_kwargs = {'duration': [0.25, 0.25, 1, 0.25], 'loop': 0}
+
+    cam.save('mpl_camera_animation.gif', **mimsave_kwargs)
 
 ```
 
