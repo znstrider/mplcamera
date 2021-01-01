@@ -19,13 +19,11 @@ class Camera:
     ax.set_ylim(-0.25, 3.25)
 
     cam = Camera(fig)
-    for i in range(5):
-        if i < 4:
-            plt.plot([i] * 10)
+    for i in range(4):
+        plt.plot([i] * 10)
+        cam.snap()
 
-            cam.snap()
-
-    cam.save('mpl_camera_animation.gif', duration=[0.1, 0.1, 1, 0.1], loop=1)
+    cam.save('mpl_camera_animation.gif', duration=[0.25, 0.25, 1, 0.25], loop=1)
 
     """
 

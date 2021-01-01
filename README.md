@@ -26,7 +26,7 @@ The goal of this package is to provide a simple way to create gifs that can be u
 - to show the creation process of a plot
 - to aid visual storytelling by being able to focus longer on individual frames, which allows to show annotations only for that time (simply remove them after you snap the frame.)
 
----
+
 
 ## Installation
 
@@ -34,7 +34,7 @@ The goal of this package is to provide a simple way to create gifs that can be u
 pip install mplcamera
 ```
 
----
+
 
 ## Usage
 
@@ -59,7 +59,7 @@ cam.snap()
 cam.save('animation.gif')
 ```
 
----
+
 
 ## Example:
 ```
@@ -71,11 +71,9 @@ cam.save('animation.gif')
     ax.set_ylim(-0.25, 3.25)
 
     cam = Camera(fig)
-    for i in range(5):
-        if i < 4:
-            plt.plot([i] * 10)
-
-            cam.snap()
+    for i in range(4):
+        plt.plot([i] * 10)
+        cam.snap()
 
     # use a different duration for frame 3. use loop=1 to not loop the gif
     mimsave_kwargs = {'duration': [0.25, 0.25, 1, 0.25], 'loop': 0}
