@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="mplcamera",
-    version="0.0.1",
+    version="0.0.2",
     author="znstrider",
     author_email="mindfulstrider@gmail.com",
     description="Camera Class to make snapshots of a figure and save a gif from stored images",
